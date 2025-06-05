@@ -21,6 +21,8 @@ PRODUCT_PACKAGES += \
     Aperture
 endif
 
+$(call inherit-product-if-exists, vendor/custom/build.mk)
+
 ifneq ($(TARGET_EXCLUDES_AUDIOFX),true)
 PRODUCT_PACKAGES += \
     AudioFX
